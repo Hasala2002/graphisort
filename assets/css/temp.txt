@@ -1,0 +1,90 @@
+$primaryColor : #13182e;
+$secondaryColor : #191f3a;
+
+$barColor : #E3056C;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    background-color: $primaryColor;
+    body{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        position: relative;
+        .main-sorter{ 
+            display: flex;
+            width: 75%;
+            height: 75%;
+            background-color: $secondaryColor;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 75%;
+            min-height: 75%;
+            align-items: flex-end;
+            padding: 5px 0;
+            .sortable-bar{
+                border-radius: 5px;
+                flex: 1;
+                margin: 0 5px;
+                background-color: $barColor;
+                transition: 0.1s;
+                border: 1px solid transparent;
+                &:hover{
+                    border: 1px solid rgba(255, 255, 255, 0.25);
+                    box-shadow: 5px 5px 16px -7px rgba(0, 0, 0, 0.67);
+                }
+                // @for $i from 1 through 30 {
+                //     &:nth-child(#{$i}) {
+                //         height: round(percentage($i/30));
+                //     }
+                // }
+            }
+        }
+        .floating-icon {
+            width: 50px;
+            height: 50px;
+            background-color:$secondaryColor;
+            border:1px solid rgba(255, 255, 255, 0.1);
+            position:absolute;
+            bottom: 30px;
+            right: 30px;
+            border-radius:50%;
+            display: grid;
+            place-items: center;
+            transition: 0.25s;
+            cursor: pointer;
+            ion-icon {
+                font-size: 32px;
+                filter: invert(1);
+            }
+            &:hover{
+                transform: rotate(-45deg);
+                box-shadow: 5px 5px 16px -7px rgba(0, 0, 0, 0.67);
+            }
+        }
+        #resetButton{
+            right: 100px;
+        }
+
+        select{
+            position: absolute;
+            bottom: 30px;
+            right: 170px;
+            outline-width: 0;
+            border:1px solid rgba(255, 255, 255, 0.1);
+            width: 200px;
+            border-radius: 5px;
+            height: 50px;
+            background-color: $secondaryColor;
+            color: white;
+            padding: 10px;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./assets/js/app.js"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link
+    rel="icon"
+    href="./assets/img/favicon.png"
+    sizes="16x16"
+    type="image/png"
+  />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <title>GraphiSort</title>
+</head>
+<body>
+    <section class="control-panel">
+        <div class="title">
+            <h1>GRAPHISORT</h1>
+        </div>
+        <div class="description">
+            <p>
+            A Sorting Algorithm is used to rearrange a given array or list elements according to a comparison operator on the elements. The comparison operator is used to decide the new order of element in the respective data structure.
+            </p>
+        </div>
+        <div class="sorter-selector">
+            <h3 id="count">BAR COUNT : 50</h3>
+            <div class="slider">
+                <span>5</span>
+            <input type="range" name="count" id="barCountRange" min="5" max="50">
+            <span>50</span>
+        </div>
+            <h3 id="speed">SPEED : 50ms</h3>
+            <div class="slider">
+                <span>50</span>
+            <input type="range" name="count" id="speedRange" min="50" max="200">
+            <span>200</span>
+        </div>
+        <div class="sorter">
+        <div class="sorting-selector" id="sorters">
+            <button id="sortBox" data-sort="bubble" class="sort-types active">Bubble</button>
+            <button id="sortBox" data-sort="selection" class="sort-types">Selection</button>
+            <button id="sortBox" data-sort="quick" class="sort-types">Quick</button>
+            <button id="sortBox" data-sort="merge" class="sort-types">Merge</button>
+            <button id="sortBox" data-sort="insertion" class="sort-types">Insertion</button>
+            <button id="sortBox" data-sort="heap" class="sort-types">Heap</button>
+            <button id="sortBox" data-sort="radix" class="sort-types">Radix</button>
+            <button id="sortBox" data-sort="bucket" class="sort-types">Bucket</button>
+        </div>
+    </div>
+        </div>
+        <div class="buttons-section">
+            <button id="resetButton">Sort</button>
+            <button id="shuffleButton">Shuffle</button>
+        </div>
+    </section>
+    <section class="main-sorter-section">
+        <div class="stage">
+        </div>
+    </section>
+</body>
+</html>
