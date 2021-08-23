@@ -148,6 +148,27 @@ const sortingData = {
             setVisualState(arr)
             return arr;
           }
+    },
+    insertion:{
+        sort: async function (arr){
+            var pos, temp,
+                len = arr.length;
+            for(var i = 1; i < len; i++){
+                pos = i
+                for(var j = i-1; j>=0;j--){
+                    if(arr[pos]<arr[j]){
+                        temp = arr[pos]
+                        arr[pos] = arr[j]
+                        arr[j] = temp
+                        pos--
+                        await sleep(SORTABLE_SPEED)
+                        setVisualState(arr)
+                    }
+                }
+            }
+            setVisualState(arr)
+            return arr;
+        }
     }
 }
 
